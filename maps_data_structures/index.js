@@ -44,6 +44,7 @@ map.set('arms', 2)
 map.set(myfunc, 'functional value')
 map.set({}, 'obj value')
 map.set(NaN, 'NaN value')
+map.set(true, 'Boolean value')
 
 console.log(map.size)
 console.log(map.get(myfunc))
