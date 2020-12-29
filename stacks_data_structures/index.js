@@ -36,6 +36,7 @@ function myStack() {
 let newStack = new myStack()
 newStack.push('hello')
 newStack.push(NaN)
+newStack.push(true)
 console.log(newStack.push({}))
 console.log(newStack.peek())
 console.log(newStack.size())
