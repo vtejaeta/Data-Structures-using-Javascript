@@ -41,3 +41,30 @@ console.log(checkForConsecutiveElements([5, 2, 3, 1, 4])) // true
 console.log(checkForConsecutiveElements([83, 78, 80, 81, 79, 82])) // true
 console.log(checkForConsecutiveElements([34, 23, 52, 12, 3])) // false
 console.log(checkForConsecutiveElements([7, 6, 5, 5, 3, 4])) // false
+
+// Approach - 2 Time Complexity: O(n) Space Complexity: O(1)
+const checkForConsecutiveElementsTwo = function (nums) {
+  let n = nums.length,
+    min = nums[0],
+    sum = 0
+
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] < min) {
+      min = nums[i]
+    }
+  }
+
+  let ap_sum = (n * (2 * min + (n - 1) * 1)) / 2
+
+  for (let i = 0; i < n; i++) {
+    sum += nums[i]
+  }
+
+  return sum == ap_sum
+}
+
+console.log('--------Approach 2------------')
+console.log(checkForConsecutiveElementsTwo([5, 2, 3, 1, 4])) // true
+console.log(checkForConsecutiveElementsTwo([83, 78, 80, 81, 79, 82])) // true
+console.log(checkForConsecutiveElementsTwo([34, 23, 52, 12, 3])) // false
+console.log(checkForConsecutiveElementsTwo([7, 6, 5, 5, 3, 4])) // false
