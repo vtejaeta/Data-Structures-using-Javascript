@@ -2,6 +2,7 @@
 // @param {number[]} arr
 // @return {number[]}
 
+// Time Complexity: O(n), Space Complexity: O(n)
 const checkForConsecutiveElements = (arr) => {
   let n = arr.length,
     min = arr[0],
