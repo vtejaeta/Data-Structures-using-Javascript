@@ -159,3 +159,8 @@ console.log(stack1.entries());
 console.log(stack1.pop1());
 stack1.push2(40);
 console.log(stack1.pop2());
+
+// Time Complexity:
+//      Push operation - O(1)
+//      Pop operation - O(1)
+// Auxiliary Space: O(n)
