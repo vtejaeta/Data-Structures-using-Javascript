@@ -40,7 +40,7 @@ function BinarySearchTree() {
     return this;
   };
 
-  this.contains = function (val) {
+  this.find = function (val) {
     if (this.root === null) return false;
 
     let current = this.root;
@@ -78,8 +78,6 @@ function BinarySearchTree() {
 
     return undefined;
   };
-
-  return false;
 }
 
 let BST = new BinarySearchTree();
@@ -94,4 +92,5 @@ BST.find(10); // true
 BST.find(2); // false
 BST.find(8); // true
 BST.find(4); // false
+BST.remove(3);
 console.log(BST);
